@@ -1,20 +1,122 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
+  <br>
+  <h1>Pipes</h1>
+  <hr>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Variable</th>
+      <th scope="col">Pipe</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Resultado</th>
+      <th scope="col">Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>UpperCasePipe</td>
+      <td>{{name}}</td>
+      <td>uppercase</td>
+      <td>Transforma el valor en la variable a mayúscula sostenida</td>
+      <td>{{name | uppercase }}</td>
+      <td><a href="https://angular.io/api/common/UpperCasePipe">Enlace</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>LowerCasePipe</td>
+      <td>{{name}}</td>
+      <td>lowercase</td>
+      <td>Transforma el valor en la variable a minúscula sostenida</td>
+      <td>{{name | lowercase }}</td>
+      <td><a href="https://angular.io/api/common/LowerCasePipe">Enlace</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>SlicePipe</td>
+      <td>{{name}}</td>
+      <td>slice:3</td>
+      <td>Presenta desde el 4to caracter en adelante</td>
+      <td>{{name | slice:3 }}</td>
+      <td><a href="https://angular.io/api/common/SlicePipe">Enlace</a></td>
+    </tr>
+  </tbody>
+  <tr>
+    <th scope="row">4</th>
+    <td>SlicePipe</td>
+    <td>{{name}}</td>
+    <td>slice:1:4</td>
+    <td>Presenta desde el 2do hasta el 5to caracter. Rango (2-5)</td>
+    <td>{{name | slice:1:4}}</td>
+    <td><a href="https://angular.io/api/common/SlicePipe">Enlace</a></td>
+  </tr>
+  <tr>
+    <th scope="row">5</th>
+    <td>SlicePipe</td>
+    <td>{{array}}</td>
+    <td>slice:5:20</td>
+    <td>Presenta desde el 6to elemento hasta el 10mo dado que no hay 20. Rango (5-20)</td>
+    <td>{{array | slice:5:20}}</td>
+    <td><a href="https://angular.io/api/common/SlicePipe">Enlace</a></td>
+  </tr>
+  <tr>
+    <th scope="row">6</th>
+    <td>DecimalPipe</td>
+    <td>{{num}}</td>
+    <td>number:'1.2-7'</td>
+    <td>Presenta el número con el formato (cantidad mínima enteros).(cantidad mínima decimales)-(cantidad máxima decimales)</td>
+    <td>{{num | number:'1.2-7'}}</td>
+    <td><a href="https://angular.io/api/common/DecimalPipe">Enlace</a></td>
+  </tr>
+  <tr>
+    <th scope="row">6</th>
+    <td>PercentPipe</td>
+    <td>{{decimal}}</td>
+    <td>percent</td>
+    <td>Presenta el valor del número como un porcentaje. Utiliza redondeo. No es soportado por todos los navegadores. Utiliza formato de number para el manejo de decimales</td>
+    <td>{{decimal | percent}}</td>
+    <td><a href="https://angular.io/api/common/PercentPipe">Enlace</a></td>
+  </tr>
+  <tr>
+    <th scope="row">7</th>
+    <td>CurrencyPipe</td>
+    <td>{{money}}</td>
+    <td>currency</td>
+    <td>Presenta el valor del número en formato de dinero, por defecto en dólares (USD)</td>
+    <td>{{money | currency}}</td>
+    <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
+  </tr>
+  <tr>
+    <th scope="row">8</th>
+    <td>CurrencyPipe</td>
+    <td>{{money}}</td>
+    <td>currency:'EUR'</td>
+    <td>Presenta el valor del número en formato de dinero usando formato en EUR</td>
+    <td>{{money | currency:'EUR'}}</td>
+    <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
+  </tr>
+  <tr>
+    <th scope="row">9</th>
+    <td>CurrencyPipe</td>
+    <td>{{money}}</td>
+    <td>currency:'EUR':false</td>
+    <td>Presenta el valor haciendo uso del acrónimo y no del símbolo</td>
+    <td>{{money | currency:'EUR':false}}</td>
+    <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
+  </tr>
+  <tr>
+    <th scope="row">10</th>
+    <td>CurrencyPipe</td>
+    <td>{{money}}</td>
+    <td>currency:'EUR':false:'1.0-0'</td>
+    <td>Presenta el valor haciendo uso del formato de enteros y decimales visto en number</td>
+    <td>{{money | currency:'EUR':false:'1.0-0'}}</td>
+    <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
+  </tr>
+</tbody>
+</table>
 
+
+</div>
