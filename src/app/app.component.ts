@@ -11,4 +11,7 @@ export class AppComponent {
   num:number = Math.PI;
   decimal:number = 0.187;
   money:number = 3489.56;
+  obj = {field1:"uno",field2:"2",field3:{field31:2,field32:true}}
+  promise = new Promise((resolve, reject) => setTimeout( ()=>resolve('Listo'), 4000))
+  myDate = new Date();
 }

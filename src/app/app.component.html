@@ -1,122 +1,146 @@
 <div class="container">
   <br>
-  <h1>Pipes</h1>
+  <h1>Angular 7 Pipes</h1>
   <hr>
   <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Variable</th>
-      <th scope="col">Pipe</th>
-      <th scope="col">Descripción</th>
-      <th scope="col">Resultado</th>
-      <th scope="col">Link</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>UpperCasePipe</td>
-      <td>{{name}}</td>
-      <td>uppercase</td>
-      <td>Transforma el valor en la variable a mayúscula sostenida</td>
-      <td>{{name | uppercase }}</td>
-      <td><a href="https://angular.io/api/common/UpperCasePipe">Enlace</a></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>LowerCasePipe</td>
-      <td>{{name}}</td>
-      <td>lowercase</td>
-      <td>Transforma el valor en la variable a minúscula sostenida</td>
-      <td>{{name | lowercase }}</td>
-      <td><a href="https://angular.io/api/common/LowerCasePipe">Enlace</a></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>SlicePipe</td>
-      <td>{{name}}</td>
-      <td>slice:3</td>
-      <td>Presenta desde el 4to caracter en adelante</td>
-      <td>{{name | slice:3 }}</td>
-      <td><a href="https://angular.io/api/common/SlicePipe">Enlace</a></td>
-    </tr>
-  </tbody>
-  <tr>
-    <th scope="row">4</th>
-    <td>SlicePipe</td>
-    <td>{{name}}</td>
-    <td>slice:1:4</td>
-    <td>Presenta desde el 2do hasta el 5to caracter. Rango (2-5)</td>
-    <td>{{name | slice:1:4}}</td>
-    <td><a href="https://angular.io/api/common/SlicePipe">Enlace</a></td>
-  </tr>
-  <tr>
-    <th scope="row">5</th>
-    <td>SlicePipe</td>
-    <td>{{array}}</td>
-    <td>slice:5:20</td>
-    <td>Presenta desde el 6to elemento hasta el 10mo dado que no hay 20. Rango (5-20)</td>
-    <td>{{array | slice:5:20}}</td>
-    <td><a href="https://angular.io/api/common/SlicePipe">Enlace</a></td>
-  </tr>
-  <tr>
-    <th scope="row">6</th>
-    <td>DecimalPipe</td>
-    <td>{{num}}</td>
-    <td>number:'1.2-7'</td>
-    <td>Presenta el número con el formato (cantidad mínima enteros).(cantidad mínima decimales)-(cantidad máxima decimales)</td>
-    <td>{{num | number:'1.2-7'}}</td>
-    <td><a href="https://angular.io/api/common/DecimalPipe">Enlace</a></td>
-  </tr>
-  <tr>
-    <th scope="row">6</th>
-    <td>PercentPipe</td>
-    <td>{{decimal}}</td>
-    <td>percent</td>
-    <td>Presenta el valor del número como un porcentaje. Utiliza redondeo. No es soportado por todos los navegadores. Utiliza formato de number para el manejo de decimales</td>
-    <td>{{decimal | percent}}</td>
-    <td><a href="https://angular.io/api/common/PercentPipe">Enlace</a></td>
-  </tr>
-  <tr>
-    <th scope="row">7</th>
-    <td>CurrencyPipe</td>
-    <td>{{money}}</td>
-    <td>currency</td>
-    <td>Presenta el valor del número en formato de dinero, por defecto en dólares (USD)</td>
-    <td>{{money | currency}}</td>
-    <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
-  </tr>
-  <tr>
-    <th scope="row">8</th>
-    <td>CurrencyPipe</td>
-    <td>{{money}}</td>
-    <td>currency:'EUR'</td>
-    <td>Presenta el valor del número en formato de dinero usando formato en EUR</td>
-    <td>{{money | currency:'EUR'}}</td>
-    <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
-  </tr>
-  <tr>
-    <th scope="row">9</th>
-    <td>CurrencyPipe</td>
-    <td>{{money}}</td>
-    <td>currency:'EUR':false</td>
-    <td>Presenta el valor haciendo uso del acrónimo y no del símbolo</td>
-    <td>{{money | currency:'EUR':false}}</td>
-    <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
-  </tr>
-  <tr>
-    <th scope="row">10</th>
-    <td>CurrencyPipe</td>
-    <td>{{money}}</td>
-    <td>currency:'EUR':false:'1.0-0'</td>
-    <td>Presenta el valor haciendo uso del formato de enteros y decimales visto en number</td>
-    <td>{{money | currency:'EUR':false:'1.0-0'}}</td>
-    <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
-  </tr>
-</tbody>
-</table>
-
-
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Variable</th>
+        <th scope="col">Pipe</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Resultado</th>
+        <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>UpperCasePipe</td>
+        <td>{{name}}</td>
+        <td>uppercase</td>
+        <td>Transforma el valor en la variable a mayúscula sostenida</td>
+        <td>{{name | uppercase }}</td>
+        <td><a href="https://angular.io/api/common/UpperCasePipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>LowerCasePipe</td>
+        <td>{{name}}</td>
+        <td>lowercase</td>
+        <td>Transforma el valor en la variable a minúscula sostenida</td>
+        <td>{{name | lowercase }}</td>
+        <td><a href="https://angular.io/api/common/LowerCasePipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>SlicePipe</td>
+        <td>{{name}}</td>
+        <td>slice:3</td>
+        <td>Presenta desde el 4to caracter en adelante</td>
+        <td>{{name | slice:3 }}</td>
+        <td><a href="https://angular.io/api/common/SlicePipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>SlicePipe</td>
+        <td>{{name}}</td>
+        <td>slice:1:4</td>
+        <td>Presenta desde el 2do hasta el 5to caracter. Rango (2-5)</td>
+        <td>{{name | slice:1:4}}</td>
+        <td><a href="https://angular.io/api/common/SlicePipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>SlicePipe</td>
+        <td>{{array}}</td>
+        <td>slice:5:20</td>
+        <td>Presenta desde el 6to elemento hasta el 10mo dado que no hay 20. Rango (5-20)</td>
+        <td>{{array | slice:5:20}}</td>
+        <td><a href="https://angular.io/api/common/SlicePipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>DecimalPipe</td>
+        <td>{{num}}</td>
+        <td>number:'1.2-7'</td>
+        <td>Presenta el número con el formato (cantidad mínima enteros).(cantidad mínima decimales)-(cantidad máxima decimales)</td>
+        <td>{{num | number:'1.2-7'}}</td>
+        <td><a href="https://angular.io/api/common/DecimalPipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>PercentPipe</td>
+        <td>{{decimal}}</td>
+        <td>percent</td>
+        <td>Presenta el valor del número como un porcentaje. Utiliza redondeo. No es soportado por todos los navegadores. Utiliza formato de number para el manejo de decimales</td>
+        <td>{{decimal | percent}}</td>
+        <td><a href="https://angular.io/api/common/PercentPipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>CurrencyPipe</td>
+        <td>{{money}}</td>
+        <td>currency</td>
+        <td>Presenta el valor del número en formato de dinero, por defecto en dólares (USD)</td>
+        <td>{{money | currency}}</td>
+        <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>CurrencyPipe</td>
+        <td>{{money}}</td>
+        <td>currency:'EUR'</td>
+        <td>Presenta el valor del número en formato de dinero usando formato en EUR</td>
+        <td>{{money | currency:'EUR'}}</td>
+        <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>CurrencyPipe</td>
+        <td>{{money}}</td>
+        <td>currency:'EUR':false</td>
+        <td>Presenta el valor haciendo uso del acrónimo y no del símbolo</td>
+        <td>{{money | currency:'EUR':false}}</td>
+        <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td>CurrencyPipe</td>
+        <td>{{money}}</td>
+        <td>currency:'EUR':false:'1.0-0'</td>
+        <td>Presenta el valor haciendo uso del formato de enteros y decimales visto en number</td>
+        <td>{{money | currency:'EUR':false:'1.0-0'}}</td>
+        <td><a href="https://angular.io/api/common/CurrencyPipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td>JsonPipe</td>
+        <td>{{obj}}</td>
+        <td>json</td>
+        <td>Presenta el contenido de un objeto como texto json</td>
+        <td><pre>{{obj | json}}</pre></td>
+        <td><a href="https://angular.io/api/common/JsonPipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td>AsyncPipe</td>
+        <td>{{promise}}</td>
+        <td>async</td>
+        <td>Presenta la información de forma asíncrona ejecutando una promesa</td>
+        <td><pre>{{promise | async}}</pre></td>
+        <td><a href="https://angular.io/api/common/AsyncPipe">Enlace</a></td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td>DatePipe</td>
+        <td>{{myDate}}</td>
+        <td>date:'fullDate'</td>
+        <td>Da formato a una fecha</td>
+        <td><pre>{{myDate | date:'fullDate'}}</pre></td>
+        <td><a href="https://angular.io/api/common/DatePipe">Enlace</a></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
